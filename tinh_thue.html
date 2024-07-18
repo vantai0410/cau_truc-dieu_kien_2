@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tnh thuế</title>
+</head>
+<body>
+<script>
+    let thuNhap = +prompt("Nhap thu nhap(trieu dong)");
+    let thue = 0;
+    if (thuNhap <= 5000000) {
+        thue = thuNhap * 0.05;
+    } else if (thuNhap <= 10000000) {
+        thue = 5000000 * 0.05 + (thuNhap - 5000000) * 0.1;
+    } else {
+        thue = 5000000 * 0.05 + 5000000 * 0.1 + (thuNhap - 10000000) * 0.2;
+    }
+    document.write("So thue phai nop la: " + thue);
+</script>
+</body>
+</html>

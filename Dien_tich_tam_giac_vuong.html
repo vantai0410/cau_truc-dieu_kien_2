@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <script>
+     function tinhDienTichTamGiacVuong(a,h){
+         if(a>0 && h>0) {
+             return 1/2 * (a*h);
+         } else {
+             return "Canh a va h phai lon hon 0";
+         }
+     }
+     let canh = 5;
+     let chieuCao = 4;
+     let dienTich = tinhDienTichTamGiacVuong(canh,chieuCao);
+     alert("dien tich hinh vuong la: " + dienTich);
+ </script>
+</body>
+</html>

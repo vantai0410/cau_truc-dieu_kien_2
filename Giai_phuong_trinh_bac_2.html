@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phuong trinh bac 2</title>
+</head>
+<body>
+<script>
+    function giaiPhuongTrinhBacHai(a,b,c){
+        let delta = b*b - 4*a*c;
+        if (a===0){
+            if (b>0) {
+                let x = -c/b;
+                return "Nghiem cua phuong trinh la: x= " + x;
+            } else {
+                return "phuong trinh vo nghiem";
+            }
+        } else {
+            if (delta>0) {
+                let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                return "Phuong trinh co hai nghiem phan biet: x1 = " + x1 + ", x2 = " + x2;
+            } else if (delta === 0) {
+                let x = -b / (2 * a);
+                return "Phuong trinh co nghiem kep: x = " + x;
+            } else {
+                return "Phuong trinh vo nghiem";
+            }
+        }
+
+    }
+    let a = +prompt("nhap a");
+    let b = +prompt("nhap b");
+    let c = +prompt("nhap c")
+    let ketQua = giaiPhuongTrinhBacHai(a,b,c);
+    document.write(ketQua);
+</script>
+</body>
+</html>

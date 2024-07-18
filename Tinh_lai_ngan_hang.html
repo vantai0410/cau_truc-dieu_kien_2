@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--A=P×(1+r)^n-->
+<!--A là số tiền cuối cùng sau n tháng.-->
+<!--P là số tiền ban đầu.-->
+<!--r là lãi suất hàng tháng (theo dạng thập phân, ví dụ 1% = 0.01).-->
+<!--n là số tháng cho vay.-->
+<br>
+<script>
+  function tinhLai(P,r,n){
+      if (P > 0 && r >0 && n>0) {
+          return   P * Math.pow((1 + (r / 100)), n);
+      } else {
+          return "so tien ban dau khong hop le";
+      }
+  }
+  let soTienBanDau = parseFloat(prompt("Nhap so tien ban dau(VND): "));
+  let laiSuat = parseFloat(prompt("Nhap lai suat hang thang: "));
+  let thangVay = parseInt(prompt("Nhap so thang vay: "));
+  let ketQua = tinhLai(soTienBanDau,laiSuat,thangVay);
+  document.write("Ket qua la: " +ketQua);
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phuong trinh bac 1</title>
+</head>
+<body>
+<!--ax+b=0-->
+<script>
+    function giaiPhuongTrinhBacNhat(a,b) {
+        if (a>0) {
+            let x = -b/a;
+            return "Nghiem cua phuong trinh la: x= " + x;
+        } else {
+            return "phuong trinh vo nghiem";
+        }
+    }
+    let a=+prompt("Nhap a: ");
+    let b=+prompt("Nhap b: ");
+    let ketQua = giaiPhuongTrinhBacNhat(a,b);
+    document.write(ketQua);
+</script>
+
+</body>
+</html>
